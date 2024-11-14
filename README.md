@@ -2,7 +2,8 @@
 
 This project was bootstrapped with [Create React App]
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="[https://github.com/Ciptaaaa/repository/blob/7094bee27d98d412fd6d902ff9a87732e629bac0/landingpage.png](https://github.com/Ciptaaaa/portofolio/blob/main/landingpage.png)">
+<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="![image](https://github.com/user-attachments/assets/07b70b76-1071-4f7f-bad3-99be3d00f15c)
+(https://github.com/Ciptaaaa/portofolio/blob/main/landingpage.png)">
 
 Built using:
 
