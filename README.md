@@ -1,8 +1,8 @@
 # Personal Portfolio Website in React
 
-This project was bootstrapped with [Create React App](https://drive.google.com/file/d/1T-E1TYYmiuiRBPT5sOb5q-gqdU3ssno8/view?usp=sharing).
+This project was bootstrapped with [Create React App]
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://github.com/Ciptaaaa/repository/blob/7094bee27d98d412fd6d902ff9a87732e629bac0/landingpage.png">
+<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="[https://github.com/Ciptaaaa/repository/blob/7094bee27d98d412fd6d902ff9a87732e629bac0/landingpage.png](https://github.com/Ciptaaaa/portofolio/blob/main/landingpage.png)">
 
 Built using:
 
