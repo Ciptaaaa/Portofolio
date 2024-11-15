@@ -18,13 +18,13 @@ export const Footer = () => {
             <div className="social-icon">
               <br />
               <br />
-              <a href="#">
+              <a href="https://www.linkedin.com/in/diaz-eka-cipta-206755221/">
                 <img src={navIcon1} alt="Icon" />
               </a>
-              <a href="#">
+              <a href="https://github.com/Ciptaaaa">
                 <img src={navIcon2} alt="Icon" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/eka_cipta">
                 <img src={navIcon3} alt="Icon" />
               </a>
               <p>Copyright 2022. All Rights Reserved</p>
