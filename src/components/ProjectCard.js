@@ -1,5 +1,7 @@
 import { Col } from "react-bootstrap";
-import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon2 from "../assets/img/nav-icon2.svg"; // GitHub Icon
+import navIcon3 from "../assets/img/vercel-icon.svg"; // Vercel Icon
+import navIcon4 from "../assets/img/netlify-icon.svg"; // Netlify Icon
 
 export const ProjectCard = ({
   title,
@@ -9,7 +11,35 @@ export const ProjectCard = ({
   Githuburl1,
   Githuburl2,
   Githuburl3,
+  vercelurl,
+  netlifyurl,
+  vercelurl2,
+  vercelurl3,
 }) => {
+  // Array URL untuk GitHub, Vercel, dan Netlify
+  const githubUrls = [Githuburl, Githuburl1, Githuburl2, Githuburl3];
+  const vercelUrls = [vercelurl, vercelurl2, vercelurl3];
+  const netlifyUrls = [netlifyurl];
+
+  // Fungsi untuk merender tombol sosial (GitHub, Vercel, Netlify)
+  const renderSocialLinks = (urls, icon, className, altText) => {
+    return urls.map((url, index) => {
+      if (!url) return null; // Abaikan jika URL kosong
+      return (
+        <div className="social-icon1" key={index}>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={className}
+          >
+            <img src={icon} alt={altText} />
+          </a>
+        </div>
+      );
+    });
+  };
+
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
@@ -20,58 +50,14 @@ export const ProjectCard = ({
         </div>
       </div>
 
-      {/* Conditional Rendering: Only show the button if the URL is defined */}
-      {Githuburl && (
-        <div className="social-icon1">
-          <a
-            href={Githuburl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-github"
-          >
-            <img src={navIcon2} alt="ico_github" />
-          </a>
-        </div>
-      )}
+      {/* Render GitHub Links */}
+      {renderSocialLinks(githubUrls, navIcon2, "btn btn-github", "GitHub Icon")}
 
-      {Githuburl1 && (
-        <div className="social-icon1">
-          <a
-            href={Githuburl1}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-github"
-          >
-            <img src={navIcon2} alt="ico_github" />
-          </a>
-        </div>
-      )}
+      {/* Render Vercel Links */}
+      {renderSocialLinks(vercelUrls, navIcon3, "btn btn-vercel", "Vercel Icon")}
 
-      {Githuburl2 && (
-        <div className="social-icon1">
-          <a
-            href={Githuburl2}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-github"
-          >
-            <img src={navIcon2} alt="ico_github" />
-          </a>
-        </div>
-      )}
-
-      {Githuburl3 && (
-        <div className="social-icon1">
-          <a
-            href={Githuburl3}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-github"
-          >
-            <img src={navIcon2} alt="ico_github" />
-          </a>
-        </div>
-      )}
+      {/* Render Netlify Links */}
+      {renderSocialLinks(netlifyUrls, navIcon4, "btn btn-vercel", "Netlify Icon")}
     </Col>
   );
 };

@@ -4,7 +4,6 @@ import projImg1 from "../assets/img/project-img1.jpg";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
-import navIcon2 from "../assets/img/nav-icon2.svg";
 import colorSharp1 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -16,12 +15,14 @@ export const Projects = () => {
       description: "Takipedia e-commerce",
       imgUrl: projImg1,
       Githuburl: "https://github.com/Ciptaaaa/takipedia",
+      vercelurl: "https://under-construction-web.vercel.app",
     },
     {
       title: "Weather Web",
       description: "A simple weather website offering real-time forecasts ",
       imgUrl: projImg2,
       Githuburl1: "https://github.com/Ciptaaaa/weatherweb",
+      netlifyurl: "https://weatherwebpriv.netlify.app/",
     },
     {
       title: "To-Do List",
@@ -29,6 +30,7 @@ export const Projects = () => {
         "A simple to-do list website to help you stay organized and productive.",
       imgUrl: projImg3,
       Githuburl2: "https://github.com/Ciptaaaa/Todo-List",
+      vercelurl2: "https://todo-list-cipta.vercel.app",
     },
     {
       title: "Calculator",
@@ -36,6 +38,7 @@ export const Projects = () => {
         "A simple calculator website that keeps a history of previous calculations.",
       imgUrl: projImg4,
       Githuburl3: "https://github.com/Ciptaaaa/calculator",
+      vercelurl3: "https://calculator-build-by-cipta.vercel.app",
     },
   ];
 

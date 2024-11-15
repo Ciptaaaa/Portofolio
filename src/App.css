@@ -225,6 +225,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Gambar latar belakang tetap saat scroll */
+  position: relative;
+  /* height: 100vh;  */
 }
 .banner .tagline {
   font-weight: 700;
@@ -291,6 +294,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+
 /************ About Css *************/
 .about {
   padding: 0 0 50px 0;
@@ -335,16 +339,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .about p {
   color: #b8b8b8;
   font-size: 18px;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   line-height: 1.5em;
   width: 96%;
   text-indent: 2rem;
 }
 .item {
-  text-align: right; /* Menyelaraskan semua konten di dalamnya ke kanan */
+  text-align: left; /* Menyelaraskan semua konten di dalamnya ke kanan */
   max-width: 100%; /* Pastikan kontainer mengisi lebar penuh */
   width: 100%;
-  margin-right: 5px;
 }
 .about .item img {
   margin-right: 35px; /* Menambahkan margin kanan sebesar 20px */
@@ -403,16 +406,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
+/* Section Skill */
 .skill {
   padding: 0 0 50px 0;
   position: relative;
   background-image: url(../src/assets/img/banner-bg.png);
   background-size: cover; /* Membuat gambar latar belakang menutupi seluruh area */
   background-position: center center; /* Menjaga posisi gambar tetap di tengah */
-  background-attachment: fixed; /* Gambar latar belakang tetap saat scroll (opsional) */
+  background-attachment: fixed; /* Gambar latar belakang tetap saat scroll */
   background-repeat: no-repeat; /* Pastikan gambar tidak terulang */
   height: 100vh; /* Membuat tinggi section sesuai dengan tinggi viewport */
 }
+
+/* Skill Box */
 .skill-bx {
   background: transparent;
   border-radius: 64px;
@@ -420,10 +426,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 60px 50px;
   margin-top: -60px;
 }
+
+/* Heading Skill */
 .skill h2 {
   font-size: 45px;
   font-weight: 700;
+  padding: 0 0 50px 0;
+  position: relative;
 }
+
+/* Deskripsi Skill */
 .skill p {
   color: #b8b8b8;
   font-size: 18px;
@@ -431,15 +443,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px 0 75px 0;
 }
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-}
+
+/* Background Image Left */
 .background-image-left {
   top: 28%;
   position: absolute;
@@ -447,33 +452,134 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
+
+/* Icon Cloud Container */
 .icon-cloud-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  width: 200px; /* Ukuran kontainer */
-  height: 200px; /* Ukuran kontainer */
+  width: 40vw; /* Menggunakan 40% dari lebar layar */
+  height: 40vw; /* Menggunakan 40% dari tinggi layar */
 }
 
-.icon-item {
-  position: absolute;
-  width: 50px; /* Ukuran ikon */
-  height: 50px; /* Ukuran ikon */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
+.icon-item img {
+  width: 60px; /* Ukuran default ikon */
+  height: 60px;
 }
 
-.icon-item:hover {
-  transform: scale(1.2); /* Efek pembesaran saat hover */
+/* Media Queries untuk perangkat kecil (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Skill Section */
+  .skill {
+    padding: 0 0 30px 0; /* Mengurangi padding pada layar kecil */
+    height: 65vh;
+  }
+
+  .skill-bx {
+    padding: 40px 30px; /* Menyesuaikan padding skill box */
+  }
+
+  .skill h2 {
+    font-size: 35px; /* Menyesuaikan ukuran font h2 */
+  }
+
+  .skill p {
+    font-size: 16px; /* Mengurangi ukuran font pada layar kecil */
+    margin: 10px 0 40px 0; /* Menyesuaikan margin untuk paragraf */
+  }
+
+  /* Icon Cloud */
+  .icon-cloud-container {
+    width: 60vw; /* Menggunakan 60% dari lebar layar */
+    height: 60vw; /* Menggunakan 60% dari tinggi layar */
+  }
+
+  .icon-item img {
+    width: 50px; /* Mengurangi ukuran ikon pada layar kecil */
+    height: 50px;
+  }
+
+  /* Background Image */
+  .background-image-left {
+    width: 50%; /* Menyesuaikan lebar gambar latar */
+    top: 20%;
+  }
+
+  /* Menyesuaikan margin pada container untuk smartphone */
+  .skill-bx {
+    padding: 40px 20px;
+    margin-top: -30px;
+  }
 }
+
+/* Media Queries untuk tablet (min-width: 768px dan max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .icon-cloud-container {
+    width: 50vw; /* Menggunakan 50% dari lebar layar untuk tablet */
+    height: 50vw; /* Menggunakan 50% dari tinggi layar untuk tablet */
+  }
+  .skill {
+    padding: 0 0 30px 0; /* Mengurangi padding pada layar kecil */
+    height: 65vh;
+  }
+
+  .icon-item img {
+    width: 55px; /* Sedikit lebih besar pada tablet */
+    height: 55px;
+  }
+
+  .skill h2 {
+    font-size: 40px; /* Menyesuaikan ukuran font h2 pada tablet */
+  }
+
+  .skill p {
+    font-size: 17px; /* Menyesuaikan ukuran font pada tablet */
+  }
+
+  /* Background Image */
+  .background-image-left {
+    width: 40%;
+    top: 25%;
+  }
+
+  /* Menyesuaikan padding skill box pada tablet */
+  .skill-bx {
+    padding: 50px 40px;
+  }
+}
+
+/* Media Queries untuk layar besar (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .icon-cloud-container {
+    width: 40vw; /* Menggunakan 40% dari lebar layar */
+    height: 40vw; /* Menggunakan 40% dari tinggi layar */
+  }
+
+  .icon-item img {
+    width: 60px; /* Ukuran ikon lebih besar di layar besar */
+    height: 60px;
+  }
+
+  .skill h2 {
+    font-size: 45px; /* Ukuran font h2 pada layar besar */
+  }
+
+  .skill p {
+    font-size: 18px; /* Ukuran font p pada layar besar */
+  }
+
+  /* Background Image */
+  .background-image-left {
+    width: 40%; /* Menyesuaikan lebar gambar latar */
+    top: 28%;
+  }
+}
+
+/* Pastikan background GitHub putih */
 .icon-cloud-container a.icon-github {
-  background-color: #ffffff !important; /* Pastikan background GitHub putih */
+  background-color: #ffffff !important;
   border-radius: 50%; /* Memastikan ikon berbentuk bulat */
   filter: brightness(1.5); /* Menambah kecerahan ikon */
 }
+
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
@@ -603,6 +709,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .social-icon1 {
   display: inline-block;
   margin-left: 14px;
+  border-color: #ffffff;
 }
 
 .social-icon1 a {
@@ -646,20 +753,78 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Footer Css ************/
+/* Footer */
 .footer {
   padding: 0 0 50px 0;
   background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative; /* Pastikan posisi footer tetap relative */
 }
+
+/* Gambar Logo */
 .footer img {
-  width: 26%;
+  width: 26%; /* Ukuran default logo */
+  max-width: 150px; /* Max width untuk logo */
+  height: auto; /* Pastikan logo proporsional */
+  display: block;
+  margin-left: 0; /* Center logo di layar */
 }
+
+/* Paragraf Copyright */
 .footer p {
   font-weight: 400;
   font-size: 14px;
   color: #b8b8b8;
   letter-spacing: 0.5px;
-  margin-top: 40px;
+  text-align: right; /* Menyelaraskan text di tengah */
+}
+
+/* Media Queries untuk perangkat kecil (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Logo menjadi lebih besar pada layar kecil */
+  .footer img {
+    width: 50%; /* Menggunakan 50% lebar kontainer pada layar kecil */
+    max-width: 120px; /* Mengatur max width logo untuk tampilan lebih kecil */
+    margin: 0 auto;
+  }
+
+  /* Mengatur ukuran font copyright */
+  .footer p {
+    font-size: 12px; /* Ukuran font copyright lebih kecil */
+    text-align: center;
+    margin-top: 40px;
+    color: #ffffff;
+  }
+}
+
+/* Media Queries untuk tablet (min-width: 768px dan max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer img {
+    width: 35%; /* Menggunakan 35% lebar kontainer pada tablet */
+    max-width: 130px; /* Mengatur max width logo untuk tablet */
+    margin: 0 auto;
+  }
+
+  /* Menyesuaikan ukuran font copyright */
+  .footer p {
+    font-size: 13px; /* Ukuran font sedikit lebih besar untuk tablet */
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+/* Media Queries untuk layar besar (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .footer img {
+    width: 26%; /* Ukuran logo tetap pada layar besar */
+    max-width: 150px; /* Ukuran default max width untuk layar besar */
+  }
+
+  .footer p {
+    font-size: 14px; /* Ukuran font copyright default */
+    text-align: center;
+    margin-top: 40px;
+  }
 }

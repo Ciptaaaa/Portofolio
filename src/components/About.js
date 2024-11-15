@@ -1,13 +1,11 @@
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
-import meter1 from "../assets/img/profile.jpeg";
 import { CloudArrowDownFill } from "react-bootstrap-icons";
-import meter2 from "../assets/img/footer-bg.png";
 
 export const About = () => {
   const downloadResume = () => {
     // Path ke file resume Anda
-    const resumeUrl = "/assets/Profile.pdf"; // Ganti dengan path file resume Anda
+    const resumeUrl = "/assets/Cipta.pdf"; // Ganti dengan path file resume Anda
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Profile.pdf"; // Nama file yang akan diunduh
@@ -42,7 +40,7 @@ export const About = () => {
                 together to drive technological advancements!
               </p>
               <div className="item">
-                <img src={meter1} alt="Image"  />
+                {/* <img src={meter1} alt="Image"  /> */}
                 <h6>
                   {/* Gunakan komponen Button dari React Bootstrap */}
                   <button onClick={downloadResume}>
