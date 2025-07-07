@@ -14,8 +14,7 @@ import {
   DiReact,
 } from "react-icons/di";
 import { TypeAnimation } from "react-type-animation";
-import profilePic from "../assets/zhoufan.jpg";
-
+import Lanyard from "./Lanyard";
 const Hero = () => {
   const downloadResume = () => {
     const resumeUrl = "/assets/diazekacipta.pdf";
@@ -103,14 +102,7 @@ const Hero = () => {
             </div>
           </motion.div>
         </motion.div>
-        <motion.img
-          src={profilePic}
-          className=" w-[300px] md:w-[450px] "
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        />
+        <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
       </div>
       <motion.div
         initial={{ opacity: 0 }}

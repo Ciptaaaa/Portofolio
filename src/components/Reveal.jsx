@@ -3,12 +3,14 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 const Reveal = ({ children, width = "fit-content" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: false });
   const mainControls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
     }
   }, [isInView, , mainControls]);
   return (

@@ -31,6 +31,7 @@ const Education = () => {
       <motion.div className="space-y-8" initial="hidden" animate="visible">
         {education.map((edu, index) => (
           <motion.div
+            key={index}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
